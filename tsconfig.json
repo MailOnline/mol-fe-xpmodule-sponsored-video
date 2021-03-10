@@ -16,6 +16,7 @@
     "./webpack/common.ts"
   ],
   "compilerOptions": {
+    "sourceMap": true,
     "allowJs": true,
     "target": "es5",
     "lib": ["es2017"],

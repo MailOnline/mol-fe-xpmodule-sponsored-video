@@ -3,13 +3,13 @@ import { renderToString } from "react-dom/server";
 
 import { Renderers } from "@mol-fe/mol-fe-registry-types";
 import { baseUrl } from "../config/config";
-import { App } from "../../shared/components/App/App";
+import { Video } from "../../shared/components/Video/Video";
 
 const webRenderer: Renderers = {
   renderBody: () => ({
     body: renderToString(
       <div data-sponsored-video>
-        <App/>
+        <Video/>
       </div>
     ),
     headers: {

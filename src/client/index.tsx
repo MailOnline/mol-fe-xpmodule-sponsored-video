@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { render } from "react-dom";
-import { App } from "../shared/components/App/App";
+import { hydrate } from "react-dom";
+import { Video } from "../shared/components/Video/Video";
 
 const init = () => {
   if ((document.readyState === 'interactive' && Boolean(document.body)) || document.readyState === 'complete') {
@@ -12,8 +12,10 @@ const init = () => {
 };
 
 const createApp = () => {
-  Array.from(document.querySelectorAll('[data-sponsored-video]')).forEach((element) => {
-    render(<App />, element);
+  console.log('..creating app..');
+  Array.from(document.querySelectorAll('[data-sponsored-video] > video')).forEach((element) => {
+    console.log(element);
+    hydrate(<Video />, element);
   });
 };
 

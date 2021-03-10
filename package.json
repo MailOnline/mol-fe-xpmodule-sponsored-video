@@ -21,7 +21,7 @@
     "precommit": "yarn run lint && yarn run test",
     "lint": "tsc --noEmit && eslint './src/**/*.{js,jsx,ts,tsx}' './webpack/*'",
     "test": "jest --coverage --passWithNoTests",
-    "start": "NODE_ENV=development webpack serve --config ./webpack/server.ts",
+    "start": "NODE_ENV=development webpack serve --config ./webpack/client.ts --config ./webpack/server.ts",
     "preversion": "yarn run lint && yarn run test",
     "postversion": "git push && git push --tags && npm publish",
     "publish-xp-module": "publishXpModule"

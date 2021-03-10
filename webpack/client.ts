@@ -14,9 +14,11 @@ const isDev = process.env.NODE_ENV === 'development';
 
 const config: Configuration = {
   devServer,
+  devtool: 'source-map',
   entry: {
     index: `${path.resolve(__dirname, '..', 'src', 'client')}/index.tsx`,
   },
+  mode: isDev && 'development' || 'production',
   module: {
     rules: rules({
       dirname: __dirname,

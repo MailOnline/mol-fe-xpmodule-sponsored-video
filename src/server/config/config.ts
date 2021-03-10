@@ -13,7 +13,7 @@ export const environment =
 
 const config: { [key in Environment]: Config } = {
   development: {
-    baseUrl: "/",
+    baseUrl: "http://localhost:8080/dist/client",
   },
   integration: {
     baseUrl: `https://scripts.dailymail.co.uk/static/mol-fe/static/mol-fe-xpmodule-sponsored-video/${xpModule.version}`,
@@ -22,5 +22,5 @@ const config: { [key in Environment]: Config } = {
     baseUrl: `https://scripts.dailymail.co.uk/static/mol-fe/static/mol-fe-xpmodule-sponsored-video/${xpModule.version}`,
   },
 };
-
 export const baseUrl = config[environment].baseUrl;
+

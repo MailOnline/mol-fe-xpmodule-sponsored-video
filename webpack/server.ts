@@ -7,10 +7,12 @@ import { rules } from "./rules/rules";
 const isDev = process.env.NODE_ENV === 'development';
 
 const config: Configuration = {
+  devtool: 'source-map',
   entry: {
     code: `${path.resolve(__dirname, '..', 'src', 'server')}/code.tsx`,
     config: `${path.resolve(__dirname, '..', 'src', 'server')}/config.ts`,
   },
+  mode: isDev && 'development' || 'production',
   module: {
     rules: rules({
       dirname: __dirname,
