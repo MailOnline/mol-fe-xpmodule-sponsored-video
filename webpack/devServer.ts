@@ -1,15 +1,13 @@
 import path from "path";
 import { Configuration } from "webpack-dev-server";
-import { webpackBundlesServer, createCljfeProxyConfig } from "@mol-fe/mol-fe-webpack-bundles";
+import { webpackBundlesServer } from "@mol-fe/mol-fe-webpack-bundles/dist/server";
 import { DevServerPayload } from "@mol-fe/mol-fe-webpack-bundles/dist/server/types";
 import { name as pkgName } from '../package.json';
-
-const xpModuleValues = {};
 
 const xpModuleConfig: DevServerPayload = {
   name: pkgName,
   xpModules: {
-    getValues: () => xpModuleValues,
+    getValues: () => ({}),
     packageDir: path.resolve(__dirname, '..')
   }
 };
@@ -19,13 +17,11 @@ const devServer: Configuration = {
     payloads: [xpModuleConfig],
     require
   }),
-  contentBase: './dist/',
+  contentBase: [
+    './node_modules/@mol-fe/mol-fe-webpack-bundles/dist'
+  ],
   disableHostCheck: true,
-  proxy: {
-    ...createCljfeProxyConfig({
-      htmlPageQueryBuilder: () => 'mobile=true'
-    })
-  },
+  publicPath: '/dist/',
   watchContentBase: true
 };
 

@@ -11,10 +11,9 @@ export interface Config {
 export const environment =
   (xpModule && (xpModule.environment as Environment)) || "development";
 
-
 const config: { [key in Environment]: Config } = {
   development: {
-    baseUrl: "dist",
+    baseUrl: "/",
   },
   integration: {
     baseUrl: `https://scripts.dailymail.co.uk/static/mol-fe/static/mol-fe-xpmodule-sponsored-video/${xpModule.version}`,

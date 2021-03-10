@@ -4,6 +4,7 @@ import { Configuration as WDSConfiguration } from "webpack-dev-server";
 import { Configuration as WebpackConfiguration } from 'webpack';
 import { common } from "./common";
 import { rules } from "./rules/rules";
+import { devServer } from "./devServer";
 
 interface Configuration extends WebpackConfiguration {
   devServer?: WDSConfiguration;
@@ -12,6 +13,7 @@ interface Configuration extends WebpackConfiguration {
 const isDev = process.env.NODE_ENV === 'development';
 
 const config: Configuration = {
+  devServer,
   entry: {
     index: `${path.resolve(__dirname, '..', 'src', 'client')}/index.tsx`,
   },

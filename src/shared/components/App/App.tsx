@@ -4,7 +4,7 @@ import styles from './styles.scss';
 
 const App: React.FC = () => (
   <div className={styles.app}>
-    Hello, world!!!
+    Hello, ...world!!!!!!
   </div>
 );
 
