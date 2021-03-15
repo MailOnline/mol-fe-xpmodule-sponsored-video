@@ -19,7 +19,7 @@ const webRenderer: Renderers = {
   renderHead: () => ({
     body: `
           <link rel="stylesheet" type="text/css" href="${ baseUrl }/index.css">
-          <script defer src="${baseUrl}/index.js"></script>`,
+          <script defer src="${ baseUrl }/index.js"></script>`,
     headers: {
       'content-type': 'text/html'
     }
