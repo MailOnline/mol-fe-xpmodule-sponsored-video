@@ -28,9 +28,9 @@
   },
   "xpModules": [
     {
-      "name": "Sponsored Video",
-      "displayName": "Sponsored Video",
-      "description": "Sponsored Video",
+      "name": "Sponsored Video Xp Module",
+      "displayName": "Sponsored Video Xp Module",
+      "description": "Sponsored Video Xp Module",
       "supportedPlatforms": [
         "cc",
         "mol.web.desktop"
