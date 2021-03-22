@@ -23,4 +23,3 @@ const config: { [key in Environment]: Config } = {
   },
 };
 export const baseUrl = config[environment].baseUrl;
-

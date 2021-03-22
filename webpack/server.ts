@@ -21,7 +21,8 @@ const config: Configuration = {
     }),
   },
   output: {
-    path: path.resolve(__dirname, '..', 'dist', 'server')
+    libraryTarget: 'commonjs',
+    path: path.resolve(__dirname, '..', 'dist', 'server'),
   },
   target: 'node'
 };
