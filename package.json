@@ -1,6 +1,6 @@
 {
   "name": "@mol-fe/mol-fe-xpmodule-sponsored-video",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/server/code.js",
   "repository": {
     "type": "git",
