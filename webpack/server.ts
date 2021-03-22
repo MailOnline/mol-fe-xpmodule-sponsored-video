@@ -9,8 +9,8 @@ const isDev = process.env.NODE_ENV === 'development';
 const config: Configuration = {
   devtool: 'source-map',
   entry: {
-    code: `${path.resolve(__dirname, '..', 'src', 'server')}/code.tsx`,
-    config: `${path.resolve(__dirname, '..', 'src', 'server')}/config.ts`,
+    code: `${ path.resolve(__dirname, '..', 'src', 'server') }/code.tsx`,
+    config: `${ path.resolve(__dirname, '..', 'src', 'server') }/config.ts`,
   },
   mode: isDev && 'development' || 'production',
   module: {
@@ -21,7 +21,7 @@ const config: Configuration = {
     }),
   },
   output: {
-    libraryTarget: 'commonjs',
+    libraryTarget: 'commonjs2',
     path: path.resolve(__dirname, '..', 'dist', 'server'),
   },
   target: 'node'
