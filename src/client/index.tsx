@@ -13,7 +13,6 @@ const init = () => {
 
 const createApp = () => {
   Array.from(document.querySelectorAll('[data-sponsored-video] > video')).forEach((element) => {
-    console.log(element);
     hydrate(<Video />, element);
   });
 };
