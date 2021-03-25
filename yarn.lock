@@ -522,7 +522,7 @@
 
 "@mol-fe/mol-fe-react@^5.19.1":
   version "5.19.1"
-  resolved "http://verdaccio.mol.dmgt.net:4873/@mol-fe%2fmol-fe-react/-/mol-fe-react-5.19.1.tgz"
+  resolved "http://verdaccio.mol.dmgt.net:4873/@mol-fe%2fmol-fe-react/-/mol-fe-react-5.19.1.tgz#e8860e4768075e6b68494719f1412224867acd51"
   integrity sha512-RwuIQzNKJ6aDhE5/cYJVcd4vLBUBb0LqwciUGRl/hyMNKTo9tfm9/0isYVmkOn/qTdPTMKHuSBeVztp9MZhFVw==
 
 "@mol-fe/mol-fe-registry-cli@^1.7.0":
