@@ -6,7 +6,7 @@ interface SelectOptions {
 interface Item {
   label: string;
   modelPath: string;
-  selectOptions: SelectOptions[];
+  selectOptions?: SelectOptions[];
   type: string;
 }
 
@@ -17,14 +17,25 @@ type GetSchema = () => {
 const getSchema: GetSchema = () => ({
   items: [
     {
-      label: 'Sample Input',
-      modelPath: '.sampleInput',
-      selectOptions: [
-        { label: 'select', value: '' },
-        { label: 'An Example Select Element', value: 'example' },
-      ],
-      type: 'select'
-    }
+      label: 'Video Title',
+      modelPath: '.title',
+      type: 'input'
+    },
+    {
+      label: 'Video URL',
+      modelPath: '.videoUrl',
+      type: 'input'
+    },
+    {
+      label: 'Video Thumbnail',
+      modelPath: '.videoThumb',
+      type: 'input'
+    },
+    {
+      label: 'Preview Text',
+      modelPath: '.previewText',
+      type: 'input'
+    },
   ]
 });
 
