@@ -5,3 +5,18 @@
 .video {
   font-size: 10px;
 }
+
+.title {
+  position: absolute;
+  height: 36px;
+  font-size: 18px;
+  line-height: 36px;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  background: #000;
+  z-index: 1;
+  font-weight: 600;
+  -webkit-box-sizing: border-box!important;
+  box-sizing: border-box!important;
+}
