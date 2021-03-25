@@ -23,17 +23,17 @@ const getSchema: GetSchema = () => ({
     },
     {
       label: 'Video URL',
-      modelPath: '.videoUrl',
+      modelPath: '.url',
       type: 'input'
     },
     {
       label: 'Video Thumbnail',
-      modelPath: '.videoThumb',
+      modelPath: '.thumb',
       type: 'input'
     },
     {
       label: 'Preview Text',
-      modelPath: '.previewText',
+      modelPath: '.preview',
       type: 'input'
     },
   ]
