@@ -9,7 +9,7 @@ interface Args {
   previewText: string;
 }
 
-const Video = (props: Args) => (
+const Video: React.FC<Args> = (props: Args) => (
   <div className={ styles.videoContainer }>
     <h3>{props.title}</h3>
     {/* eslint-disable-next-line jsx-a11y/media-has-caption */ }
