@@ -32,4 +32,4 @@ const config: Configuration = {
   target: 'web'
 };
 
-export default merge<Configuration>(config, common);
+export default merge<Configuration>(common, config);

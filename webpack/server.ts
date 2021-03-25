@@ -12,6 +12,7 @@ const config: Configuration = {
     code: `${ path.resolve(__dirname, '..', 'src', 'server') }/code.tsx`,
     config: `${ path.resolve(__dirname, '..', 'src', 'server') }/config.ts`,
   },
+  externals: ['react', 'react-dom', 'react-dom/server'],
   mode: isDev && 'development' || 'production',
   module: {
     rules: rules({
@@ -27,4 +28,4 @@ const config: Configuration = {
   target: 'node'
 };
 
-export default merge<Configuration>(config, common);
+export default merge<Configuration>(common, config);
