@@ -19,7 +19,7 @@ const postCssLoader = {
   }
 };
 
-const cssRules: CssRules = ({dirname}) => [
+const cssRules: CssRules = ({ dirname }) => [
   {
     test: /\.s?css$/,
     use: [
@@ -27,9 +27,8 @@ const cssRules: CssRules = ({dirname}) => [
       {
         loader: 'css-loader',
         options: {
-          modules: {
-            localIdentName: '[local]--[hash:base64:5]'
-          },
+          localIdentName: '[local]-[hash:base64:5]',
+          modules: true,
           sourceMap: true
         }
       },

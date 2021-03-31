@@ -12,7 +12,7 @@ const common: Configuration = {
   plugins: [
     new MiniCssExtractPlugin({
       chunkFilename: '[id].css',
-      filename: '[name].css'
+      filename: '[name].css',
     })
   ],
   resolve: {

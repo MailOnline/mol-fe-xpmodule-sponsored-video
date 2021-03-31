@@ -1,12 +1,22 @@
 .videoContainer {
   margin-bottom: 10px;
+
+  video {
+    width: 100%;
+  }
 }
 
 .video {
   font-size: 10px;
+  width: 1000px;
+}
+
+.titleContainer {
+  position: relative;
 }
 
 .title {
+  padding: 0 10px;
   position: absolute;
   height: 36px;
   font-size: 18px;
