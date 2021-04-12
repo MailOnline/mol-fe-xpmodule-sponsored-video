@@ -4,9 +4,9 @@ import { renderToString } from "react-dom/server";
 import { RenderArguments, Renderers } from "@mol-fe/mol-fe-registry-types";
 import { baseUrl } from "../config/config";
 import { VideoContainer } from "../../shared/components/VideoContainer/VideoContainer";
-console.log(baseUrl);
+
 const webRenderer: Renderers = {
-  renderBody: ({ values }: RenderArguments) => {
+  renderBody: ({ env, values }: RenderArguments) => {
 
     let body = '';
 
@@ -14,7 +14,8 @@ const webRenderer: Renderers = {
       const { title, url, thumb, preview } = values;
 
       body = renderToString(
-        <VideoContainer articleUrl={""} title={ title } url={ url } thumb={ thumb } previewText={ preview }/>
+        <VideoContainer channel={ env.channel || "" } articleUrl={ "" } title={ title } url={ url } thumb={ thumb }
+                        previewText={ preview }/>
       );
     }
 

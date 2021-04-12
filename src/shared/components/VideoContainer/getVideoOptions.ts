@@ -3,9 +3,10 @@ interface GetVideoOptions {
   isMobile: boolean;
   src: string;
   title: string;
+  channel: string;
 }
 
-const getVideoOptions = ({ linkBaseUrl, isMobile, src, title }: GetVideoOptions) => ({
+const getVideoOptions = ({ channel, linkBaseUrl, isMobile, src, title }: GetVideoOptions) => ({
   linkBaseUrl,
   isMobile,
   "duration": 164000,
@@ -35,7 +36,7 @@ const getVideoOptions = ({ linkBaseUrl, isMobile, src, title }: GetVideoOptions)
       "clickThrough-url": "https://pubads.g.doubleclick.net/gampad/clk?id=5030863082&iu=/424397508/dailymail.uk/advertorial"
     },
     "tracking": {
-      "channelShortName": "news",
+      "channelShortName": channel || 'news',
       "sponsored": null,
       "referenceId": 17584,
       "trackingType": "commercial-banner-player"
