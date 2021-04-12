@@ -7,7 +7,6 @@
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:jsx-a11y/recommended",
         "plugin:promise/recommended",
         "plugin:react-hooks/recommended",
         "plugin:react/recommended"
@@ -23,7 +22,6 @@
     "plugins": [
         "@typescript-eslint",
         "eslint-plugin-import",
-        "eslint-plugin-jsx-a11y",
         "eslint-plugin-promise",
         "eslint-plugin-react-hooks",
         "eslint-plugin-react"
@@ -50,8 +48,7 @@
         "object-curly-spacing": [
             "error",
             "always"
-        ],
-        "sort-keys": "error"
+        ]
     },
     "settings": {
         "react": {

@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { hydrate } from "react-dom";
-import { Video } from "../shared/components/Video/Video";
+
+import { VideoContainer } from "../shared/components/VideoContainer/VideoContainer";
 
 const init = () => {
   if ((document.readyState === 'interactive' && Boolean(document.body)) || document.readyState === 'complete') {
@@ -13,7 +13,7 @@ const init = () => {
 
 const createApp = () => {
   Array.from(document.querySelectorAll('[data-sponsored-video] > video')).forEach((element) => {
-    hydrate(<Video previewText="" thumb="" url="" title=""/>, element);
+    hydrate(<VideoContainer articleUrl="" previewText="" thumb="" url="" title=""/>, element);
   });
 };
 

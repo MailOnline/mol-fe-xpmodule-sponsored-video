@@ -59,6 +59,7 @@
     "@mol-fe/mol-fe-registry-types": "^1.1.2",
     "@mol-fe/mol-fe-webpack-bundles": "^1.9.1",
     "@types/autoprefixer": "^9.7.2",
+    "@types/classnames": "^2.2.11",
     "@types/jest": "^25.2.1",
     "@types/mini-css-extract-plugin": "^1.2.2",
     "@types/node": "^13.11.0",
@@ -104,6 +105,7 @@
     "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "react-dom": "^17.0.1"
   }
 }
