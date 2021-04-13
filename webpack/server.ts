@@ -1,0 +1,31 @@
+import path from "path";
+import { Configuration } from 'webpack';
+import { merge } from "webpack-merge";
+import { common } from "./common";
+import { rules } from "./rules/rules";
+
+const isDev = process.env.NODE_ENV === 'development';
+
+const config: Configuration = {
+  devtool: 'source-map',
+  entry: {
+    code: `${ path.resolve(__dirname, '..', 'src', 'server') }/code.tsx`,
+    config: `${ path.resolve(__dirname, '..', 'src', 'server') }/config.ts`,
+  },
+  externals: ['react', 'react-dom', 'react-dom/server'],
+  mode: isDev && 'development' || 'production',
+  module: {
+    rules: rules({
+      dirname: __dirname,
+      isDev,
+      isServer: true
+    }),
+  },
+  output: {
+    libraryTarget: 'commonjs2',
+    path: path.resolve(__dirname, '..', 'dist', 'server'),
+  },
+  target: 'node'
+};
+
+export default merge<Configuration>(common, config);
